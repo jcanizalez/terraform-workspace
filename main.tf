@@ -8,6 +8,6 @@ terraform {
 }
 
 
-"example_pet" mypet {
+"example_pet" "mypet" {
    name = "petname"
 }
