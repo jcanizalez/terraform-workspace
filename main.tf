@@ -1,13 +1,18 @@
 terraform {
   required_providers {
-    example = {
-      source = "CyrusJavan/example"
-      version = "1.1.0"
+    petstore = {
+      source = "terraform-in-action/petstore"
+      version = "1.0.1"
     }
   }
 }
 
+provider "petstore" {
+  # Configuration options
+}
 
-"example_pet" "mypet" {
-   name = "petname"
+resource "petstore_pet" "pet" {
+    name    = "princess"
+    species = "cat"
+    age     = 3
 }
